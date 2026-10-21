@@ -12,6 +12,6 @@ PA#1: proposal and planning. No code yet.
 
 | Student ID | Name |
 |---|---|
-| TBD | TBD |
-| TBD | TBD |
-| TBD | TBD |
+| 23127166 | Nguyễn Hoàng Đăng |
+| 23127260 | Tô Minh Thắng |
+| 23127351 | Lê Minh Đức |
