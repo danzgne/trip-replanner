@@ -1,0 +1,17 @@
+[
+  {"id":"homestay","name":"Homestay","indoor":true,"hours":[["00:00","23:59"]],"lat":11.945,"lng":108.44,"searchable":false},
+  {"id":"cho_da_lat","name":"Chợ Đà Lạt","category":"market","indoor":true,"hours":[["06:00","22:00"]],"lat":11.9429,"lng":108.4373},
+  {"id":"dinh_bao_dai","name":"Dinh Bảo Đại (Dinh III)","category":"museum","indoor":true,"hours":[["07:00","17:00"]],"lat":11.9302,"lng":108.4296},
+  {"id":"xq_su_quan","name":"XQ Sử Quán","category":"museum","indoor":true,"hours":[["07:30","17:30"]],"lat":11.953,"lng":108.447},
+  {"id":"bao_tang_lam_dong","name":"Bảo tàng Lâm Đồng","category":"museum","indoor":true,"hours":[["07:30","11:30"],["13:30","16:30"]],"lat":11.938,"lng":108.46},
+  {"id":"crazy_house","name":"Biệt thự Hằng Nga (Crazy House)","category":"sight","indoor":false,"hours":[["08:30","19:00"]],"lat":11.9353,"lng":108.4307},
+  {"id":"ho_xuan_huong","name":"Hồ Xuân Hương","category":"sight","indoor":false,"hours":[["00:00","23:59"]],"lat":11.9416,"lng":108.4425},
+  {"id":"truc_lam","name":"Thiền viện Trúc Lâm","category":"sight","indoor":false,"hours":[["07:00","17:00"]],"lat":11.9022,"lng":108.4357},
+  {"id":"cafe_tung","name":"Cà phê Tùng","category":"cafe","indoor":true,"hours":[["07:00","22:00"]],"lat":11.9431,"lng":108.4385},
+  {"id":"me_linh","name":"Mê Linh Coffee Garden","category":"cafe","indoor":false,"hours":[["07:00","18:00"]],"lat":11.989,"lng":108.368},
+  {"id":"ga_da_lat","name":"Ga Đà Lạt","category":"sight","indoor":true,"hours":[["06:00","17:00"]],"lat":11.942,"lng":108.455},
+  {"id":"dau_tay_nha_kinh","name":"Vườn dâu tây nhà kính","category":"farm","indoor":true,"hours":[["07:00","17:00"]],"lat":11.97,"lng":108.43},
+  {"id":"duong_ham_dat_set","name":"Đường hầm điêu khắc đất sét","category":"sight","indoor":false,"hours":[["07:00","17:00"]],"lat":11.889,"lng":108.438},
+  {"id":"dinner_booking","name":"Nhà hàng đã đặt bàn","category":"restaurant","indoor":true,"hours":[["10:00","22:00"]],"lat":11.94,"lng":108.438},
+  {"id":"ben_xe","name":"Bến xe liên tỉnh Đà Lạt","category":"station","indoor":true,"hours":[["00:00","23:59"]],"lat":11.9285,"lng":108.4455}
+]

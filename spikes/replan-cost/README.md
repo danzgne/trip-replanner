@@ -2,7 +2,7 @@
 
 One rainy-afternoon scenario in Đà Lạt: 15 catalog places with fixture opening hours, fixture driving times, a prepaid dinner at 18:30 and a sleeper bus at 22:00. The agent searches places, asks for travel times and submits a plan that the validator in `index.js` accepts or rejects.
 
-Run: put `ANTHROPIC_API_KEY` in `../../.env.local`, then `npm install && npm start`. `MODEL`, `EFFORT` and `RUNS` override the defaults.
+Run: put `ANTHROPIC_API_KEY` in `../../.env.local`, then `npm install && npm start`. It runs every scenario in `../../eval/scenarios` against the places in `../../eval/places.json`. `MODEL`, `EFFORT`, `RUNS` (per scenario, default 1) and `SCENARIO` (id prefix) override the defaults. Sets A to C below ran one scenario, before the runner read scenario files.
 
 ## Results, 2026-10-21
 

@@ -1,0 +1,15 @@
+{
+  "id": "001-short-name",
+  "source": "Where this comes from: whose real trip, or 'invented'.",
+  "now": "10:15",
+  "rain_from": "10:30",
+  "current_place": "homestay",
+  "fixed": [
+    { "place_id": "ben_xe", "start": "21:30", "end": "22:00", "label": "What is booked, how much was paid, refundable or not" }
+  ],
+  "planned": [
+    { "place_id": "truc_lam", "start": "11:00", "end": "12:30" }
+  ],
+  "message": "What the traveller types, in Vietnamese, the way a real person would.",
+  "extra_places": []
+}
