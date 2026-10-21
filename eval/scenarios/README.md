@@ -15,7 +15,7 @@ Each file is one situation the re-plan agent must handle. The runner in `spikes/
    - `message`: what they type, in Vietnamese, as a real person would ("mưa to quá, mấy đứa nhỏ đói rồi").
    - `extra_places`: places not yet in `../places.json`, same fields as there. Take `lat` and `lng` from Google Maps (right click on the place); write `hours` as `[["07:00", "17:00"]]`, with two ranges if it closes at noon.
 3. Every `place_id` must exist in `../places.json` or in `extra_places`.
-4. Run `npm start` in `spikes/replan-cost` with `SCENARIO=NNN` to check that the file loads.
+4. Run `npm install` once, then `npm run check` in `spikes/replan-cost`. It checks every scenario file without calling any API, so no key is needed. Đăng runs the agent on the finished set.
 
 ## What makes a good set
 

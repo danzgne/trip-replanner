@@ -6,6 +6,7 @@ const MODEL = process.env.MODEL ?? "claude-haiku-5-5";
 const EFFORT = process.env.EFFORT ?? "medium";
 const RUNS = Number(process.env.RUNS ?? 1);
 const ONLY = process.env.SCENARIO;
+const CHECK_ONLY = process.argv.includes("--check");
 const MAX_TURNS = 12;
 const MAX_PROPOSALS = 3;
 const PRICES = { "claude-haiku-5-5": { input: 0.1, output: 0.5 }, "claude-sonnet-5-5": { input: 2, output: 10 } };
@@ -153,6 +154,34 @@ const tools = [
     },
   },
 ];
+
+function checkScenario(scenario) {
+  const problems = [];
+  const hhmm = /^([01]\d|2[0-3]):[0-5]\d$/;
+  for (const key of ["id", "now", "current_place", "fixed", "planned", "message"]) {
+    if (scenario[key] === undefined) problems.push(`missing field ${key}`);
+  }
+  const times = [scenario.now, scenario.rain_from, ...(scenario.fixed ?? []).flatMap((f) => [f.start, f.end]), ...(scenario.planned ?? []).flatMap((p) => [p.start, p.end])];
+  for (const time of times.filter((x) => x !== null && x !== undefined)) {
+    if (!hhmm.test(time)) problems.push(`time ${time} is not HH:MM`);
+  }
+  try {
+    makeWorld(scenario);
+  } catch (err) {
+    problems.push(err.message);
+  }
+  return problems;
+}
+
+if (CHECK_ONLY) {
+  let failed = 0;
+  for (const scenario of SCENARIOS) {
+    const problems = checkScenario(scenario);
+    if (problems.length) failed++;
+    console.log(`${scenario.id ?? "(no id)"}: ${problems.length ? "PROBLEM\n  " + problems.join("\n  ") : "ok"}`);
+  }
+  process.exit(failed ? 1 : 0);
+}
 
 const client = new Anthropic(
   process.env.ANTHROPIC_WORKSPACE_ID ? { defaultHeaders: { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID } } : {},
