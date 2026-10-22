@@ -1,0 +1,17 @@
+{
+  "id": "004-prepaid-greenhouse-tour",
+  "source": "Invented. Tests: a prepaid indoor tour in the middle of the day (strawberry greenhouse at 14:00) that the morning and afternoon are built around; rain from 10:00; family with one child.",
+  "now": "09:40",
+  "rain_from": "10:00",
+  "current_place": "ho_xuan_huong",
+  "fixed": [
+    { "place_id": "dau_tay_nha_kinh", "start": "14:00", "end": "15:30", "label": "Tour hái dâu và làm mứt trong nhà kính, 2 người lớn 1 trẻ em, đã chuyển khoản 450.000đ, không hoàn" }
+  ],
+  "planned": [
+    { "place_id": "crazy_house", "start": "10:00", "end": "11:30" },
+    { "place_id": "cho_da_lat", "start": "12:00", "end": "13:00" },
+    { "place_id": "me_linh", "start": "16:00", "end": "17:30" }
+  ],
+  "message": "Mưa rồi, Crazy House với Mê Linh ngoài trời chắc bỏ thôi. Tour hái dâu 2h chiều đã trả tiền nên vẫn đi nha, bé nhà mình mong lắm. Trưa ăn đâu gần gần cũng được.",
+  "extra_places": []
+}

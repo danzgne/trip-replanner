@@ -1,0 +1,20 @@
+{
+  "id": "009-evening-rain-hot-food",
+  "source": "Invented. Tests: rain that starts only at 17:30, so the late-afternoon walk by the lake can stay; a group of six colleagues asks for hot food instead of the outdoor night market; bus at 23:00.",
+  "now": "15:30",
+  "rain_from": "17:30",
+  "current_place": "cafe_tung",
+  "fixed": [
+    { "place_id": "ben_xe", "start": "22:30", "end": "23:00", "label": "Xe giường nằm 23:00 về TP.HCM, 6 vé công ty đặt, không đổi được" }
+  ],
+  "planned": [
+    { "place_id": "ho_xuan_huong", "start": "16:00", "end": "17:30" },
+    { "place_id": "cho_dem", "start": "18:00", "end": "20:30" },
+    { "place_id": "ho_xuan_huong", "start": "20:45", "end": "21:45" }
+  ],
+  "message": "Dự báo 5 rưỡi chiều mưa to tới khuya. Team 6 người, tối tính ăn vặt chợ đêm mà mưa thì thôi, kiếm quán lẩu nào nóng nóng ăn cho ấm. 11h đêm xe công ty đặt mới chạy.",
+  "extra_places": [
+    { "id": "cho_dem", "name": "Chợ đêm Đà Lạt", "category": "market", "indoor": false, "hours": [["17:00", "23:00"]], "lat": 11.9414, "lng": 108.4373 },
+    { "id": "lau_ga_tao_ngo", "name": "Lẩu gà lá é Tao Ngộ", "category": "restaurant", "indoor": true, "hours": [["10:00", "22:00"]], "lat": 11.9314, "lng": 108.4454 }
+  ]
+}

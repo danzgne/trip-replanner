@@ -1,0 +1,17 @@
+{
+  "id": "002-checkout-early-bus",
+  "source": "Invented. Tests: homestay check-out at noon on the last morning, then a 14:00 bus, so the windows are short and the plan must send them back to pack; three students.",
+  "now": "08:30",
+  "rain_from": "09:00",
+  "current_place": "homestay",
+  "fixed": [
+    { "place_id": "homestay", "start": "11:30", "end": "12:00", "label": "Trả phòng homestay trước 12:00, đồ chưa dọn; trả trễ phụ thu 200.000đ" },
+    { "place_id": "ben_xe", "start": "13:30", "end": "14:00", "label": "Xe limousine 14:00 về TP.HCM, 3 vé 870.000đ, không hoàn, có mặt trước 13:30" }
+  ],
+  "planned": [
+    { "place_id": "ho_xuan_huong", "start": "09:00", "end": "10:30" },
+    { "place_id": "cho_da_lat", "start": "10:45", "end": "11:15" }
+  ],
+  "message": "Mưa rồi, khỏi đạp vịt hồ Xuân Hương. Tụi mình còn phải về dọn đồ trả phòng trước 12h, 2h chiều xe chạy. Ghé đâu mua ít mứt làm quà với ăn trưa cho kịp xe là được.",
+  "extra_places": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "003-hungry-kids",
+  "source": "Invented. Tests: two small kids who are hungry right now, so lunch comes first and the afternoon needs somewhere indoor for kids; rain from noon; sleeper bus at 21:00.",
+  "now": "11:40",
+  "rain_from": "12:00",
+  "current_place": "crazy_house",
+  "fixed": [
+    { "place_id": "ben_xe", "start": "20:30", "end": "21:00", "label": "Xe giường nằm 21:00 về TP.HCM, 4 vé (2 người lớn, 2 trẻ em) 1.160.000đ, không hoàn" }
+  ],
+  "planned": [
+    { "place_id": "duong_ham_dat_set", "start": "12:15", "end": "13:45" },
+    { "place_id": "ho_xuan_huong", "start": "14:30", "end": "16:30" },
+    { "place_id": "cho_da_lat", "start": "17:00", "end": "19:00" }
+  ],
+  "message": "Mưa tới nơi rồi mà 2 đứa nhỏ kêu đói từ nãy. Kiếm chỗ có mái che cho cả nhà ăn trưa trước đã, chiều tìm chỗ trong nhà cho tụi nhỏ chạy nhảy được, 9h tối còn xe về Sài Gòn.",
+  "extra_places": [
+    { "id": "go_da_lat", "name": "GO! Đà Lạt", "category": "mall", "indoor": true, "hours": [["08:00", "22:00"]], "lat": 11.9382, "lng": 108.4448 }
+  ]
+}

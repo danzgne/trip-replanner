@@ -1,0 +1,17 @@
+{
+  "id": "006-older-parents-museum",
+  "source": "Invented. Tests: older parents who cannot climb or walk far, asking for a museum that closes 11:30-13:30 for lunch; a birthday dinner at 18:00.",
+  "now": "10:30",
+  "rain_from": "10:45",
+  "current_place": "homestay",
+  "fixed": [
+    { "place_id": "dinner_booking", "start": "18:00", "end": "20:00", "label": "Tiệc mừng thọ mẹ 70 tuổi, bàn 8 người, đã cọc 1.000.000đ, không hoàn" }
+  ],
+  "planned": [
+    { "place_id": "truc_lam", "start": "11:00", "end": "12:30" },
+    { "place_id": "cho_da_lat", "start": "13:00", "end": "14:00" },
+    { "place_id": "ho_xuan_huong", "start": "15:00", "end": "16:30" }
+  ],
+  "message": "Sắp mưa nữa rồi. Ba mẹ mình lớn tuổi, mẹ đau đầu gối, đừng cho đi chỗ nào phải leo dốc hay đi bộ nhiều. Mẹ có nói muốn coi Bảo tàng Lâm Đồng. Tối nay 6h tiệc mừng thọ mẹ, đừng để trễ nha.",
+  "extra_places": []
+}

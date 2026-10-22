@@ -1,0 +1,18 @@
+{
+  "id": "005-friends-tour-cancelled",
+  "source": "Invented. Tests: friends who still want to go out on their last night; it has rained since 11:00, the canyoning tour was cancelled and refunded, there is no fixed booking left, and the evening plan (night market) is outdoor.",
+  "now": "12:30",
+  "rain_from": "11:00",
+  "current_place": "homestay",
+  "fixed": [],
+  "planned": [
+    { "place_id": "thac_datanla", "start": "13:00", "end": "16:30" },
+    { "place_id": "cho_dem", "start": "18:30", "end": "21:00" }
+  ],
+  "message": "Tour vượt thác Datanla báo huỷ vì mưa, hoàn tiền rồi. 4 đứa tụi mình vẫn muốn đi chơi chứ không ngồi homestay đâu, tối nay là tối cuối mà. Chợ đêm mưa vầy chắc khỏi, kiếm chỗ nào ăn uống, ngồi chill tới khuya giùm.",
+  "extra_places": [
+    { "id": "thac_datanla", "name": "Khu du lịch Thác Datanla", "category": "sight", "indoor": false, "hours": [["07:00", "17:00"]], "lat": 11.9034, "lng": 108.4497 },
+    { "id": "cho_dem", "name": "Chợ đêm Đà Lạt", "category": "market", "indoor": false, "hours": [["17:00", "23:00"]], "lat": 11.9414, "lng": 108.4373 },
+    { "id": "lau_ga_tao_ngo", "name": "Lẩu gà lá é Tao Ngộ", "category": "restaurant", "indoor": true, "hours": [["10:00", "22:00"]], "lat": 11.9314, "lng": 108.4454 }
+  ]
+}

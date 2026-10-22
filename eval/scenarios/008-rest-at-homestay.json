@@ -1,0 +1,17 @@
+{
+  "id": "008-rest-at-homestay",
+  "source": "Invented. Tests: a tired, soaked family that asks for a long rest at the homestay, which the 150-minute stop limit does not yet allow (spike README, Limits); the rating guide decides whether splitting the rest is right.",
+  "now": "11:20",
+  "rain_from": "11:00",
+  "current_place": "cho_da_lat",
+  "fixed": [
+    { "place_id": "dinner_booking", "start": "18:30", "end": "20:00", "label": "Bàn ăn tối 4 người, cọc 200.000đ, không hoàn" }
+  ],
+  "planned": [
+    { "place_id": "ho_xuan_huong", "start": "11:30", "end": "12:30" },
+    { "place_id": "crazy_house", "start": "13:30", "end": "15:00" },
+    { "place_id": "truc_lam", "start": "15:30", "end": "17:00" }
+  ],
+  "message": "Cả nhà dính mưa ướt hết, bé út hắt xì liên tục. Mua ít đồ ăn ở chợ rồi về homestay tắm rửa, ngủ trưa tới chiều luôn, tối đi ăn nhà hàng đã đặt là được.",
+  "extra_places": []
+}
