@@ -27,7 +27,7 @@ Scenario 000 plus Thắng's 001 to 010, one run each with the set C validator.
 
 Reading the first run's plans showed two runner bugs. The restaurant and bus station used as bookings were searchable, so plans 003 and 007 added a dinner booking the traveller did not have, and the validator passed them. And in 005 the agent answered in text after its first plan was rejected, which ended the run. Booking places are now `booking_only` in `../../eval/places.json` (not searchable, and rejected unless the scenario holds that booking), and after a rejected plan the runner asks the agent for a revised one.
 
-After the fixes all 11 runs ended with a valid plan. Valid is not the same as right: in 008 the family asked to rest at the homestay and got four stops instead. That is the misread-request error the hand ratings must catch.
+After the fixes all 11 runs ended with a valid plan, but valid is not the same as right. In 009 the agent dropped a lake walk that ends as the rain starts and could stay, and in 005 the explanation told the friends to cancel two bookings they did not have; these are the misread-request errors the hand ratings must catch. In 008 the family asked to rest at the homestay and got four stops, but that came from our own rules: the homestay is not searchable and the 150-minute stop limit forbids a long rest. Four plans (002, 003, 005, 009) also return to a place already visited that day.
 
 ## Limits
 

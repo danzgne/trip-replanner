@@ -21,7 +21,7 @@ Repository: https://github.com/danzgne/trip-replanner
 
 **Cost of a wrong answer.** The person harmed is the traveller.
 - *Missed fixed booking:* blocked by the validator unless its data is wrong (a closing time, a travel time in a storm). Then the traveller misses the sleeper bus (about 290,000 VND per seat on a Phương Trang limousine) and pays for an extra night (300,000 to 600,000 VND for a homestay double room), or loses a prepaid tour fee. Fixable only before departure.
-- *Misread request:* the agent drops the one stop grandparents asked for, or sends a tired family to four places, as it did in our scenario 008. Code cannot check this; the constraints shown in the diff let the traveller catch it before accepting.
+- *Misread request:* the agent drops a stop the traveller could still do (our run of 009 dropped a lake walk that ends as the rain starts) or explains wrongly (005 told friends to cancel bookings they did not have). Code cannot check this; the constraints shown in the diff let the traveller catch it before accepting.
 - *Unusable plan:* a drive to a place that turns out closed costs about an hour of a six-hour afternoon.
 - *Plan not worth following:* valid but empty, so the family is back at the homestay, the failure we lived through. Early spike runs (output not kept) parked travellers in one café for five hours, hence the 150-minute stop limit.
 
@@ -59,7 +59,7 @@ The course calendar is not published yet. The PA#1 rubric places evaluation at P
 
 ## 5. Risks
 
-1. **Plans are valid but not worth following.** Still visible: in the 11-scenario run, 3 valid plans sent travellers back to a place they had already visited that day. *Mitigation, already started:* the stop limit removed five-hour café plans. Đăng's rating guide, starting this week, covers when a long rest is what the traveller asked for. If more than 3 in 10 plans are rated useless at checkpoint 4, we switch to Claude Sonnet 5.5; if that fails, the agent chooses among indoor half-day routes we build by hand.
+1. **Plans are valid but not worth following.** Still visible: in the 11-scenario run, 4 valid plans sent travellers back to a place they had already visited that day. *Mitigation, already started:* the stop limit removed five-hour café plans. Đăng's rating guide, starting this week, covers when a long rest is what the traveller asked for. If more than 3 in 10 plans are rated useless at checkpoint 4, we switch to Claude Sonnet 5.5; if that fails, the agent chooses among indoor half-day routes we build by hand.
 2. **Place data for Đà Lạt is unreliable,** and the validator is only as good as its data: many small cafés have missing or wrong hours on Google, which has no indoor field. *Mitigation, starting this week:* Đức checks 30 places against their Facebook pages, and Đăng sets up the Google billing account. If more than 30% are wrong or missing, the catalog keeps only places we confirm by phone, 60 instead of 100.
 
 ## 6. Technology choices
