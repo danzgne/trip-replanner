@@ -12,6 +12,6 @@
   {"id":"ga_da_lat","name":"Ga Đà Lạt","category":"sight","indoor":true,"hours":[["06:00","17:00"]],"lat":11.942,"lng":108.455},
   {"id":"dau_tay_nha_kinh","name":"Vườn dâu tây nhà kính","category":"farm","indoor":true,"hours":[["07:00","17:00"]],"lat":11.97,"lng":108.43},
   {"id":"duong_ham_dat_set","name":"Đường hầm điêu khắc đất sét","category":"sight","indoor":false,"hours":[["07:00","17:00"]],"lat":11.889,"lng":108.438},
-  {"id":"dinner_booking","name":"Nhà hàng đã đặt bàn","category":"restaurant","indoor":true,"hours":[["10:00","22:00"]],"lat":11.94,"lng":108.438},
-  {"id":"ben_xe","name":"Bến xe liên tỉnh Đà Lạt","category":"station","indoor":true,"hours":[["00:00","23:59"]],"lat":11.9285,"lng":108.4455}
+  {"id":"dinner_booking","name":"Nhà hàng đã đặt bàn","category":"restaurant","indoor":true,"hours":[["10:00","22:00"]],"lat":11.94,"lng":108.438,"booking_only":true},
+  {"id":"ben_xe","name":"Bến xe liên tỉnh Đà Lạt","category":"station","indoor":true,"hours":[["00:00","23:59"]],"lat":11.9285,"lng":108.4455,"booking_only":true}
 ]

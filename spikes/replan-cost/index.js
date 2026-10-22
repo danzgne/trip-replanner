@@ -62,6 +62,8 @@ function makeWorld(scenario) {
         violations.push(`unknown place_id ${a.place_id}`);
         continue;
       }
+      if (place.booking_only && !scenario.fixed.some((f) => f.place_id === a.place_id))
+        violations.push(`${a.place_id}: this is a booking the traveller does not have`);
       if (toMin(a.end) <= toMin(a.start)) violations.push(`${a.place_id}: end before start`);
       if (!isOpen(place, a.start, a.end)) violations.push(`${a.place_id}: closed during ${a.start}-${a.end}`);
       if (!place.indoor && raining(a.end)) violations.push(`${a.place_id}: outdoor while raining`);
@@ -87,7 +89,7 @@ function makeWorld(scenario) {
     if (name === "search_places") {
       const [s, e] = input.open_between ?? [];
       return places
-        .filter((p) => p.searchable !== false)
+        .filter((p) => p.searchable !== false && !p.booking_only)
         .filter((p) => !input.indoor_only || p.indoor)
         .filter((p) => !s || !e || isOpen(p, s, e))
         .map(({ id, name, category, indoor, hours }) => ({ id, name, category, indoor, hours }));
@@ -190,7 +192,7 @@ const client = new Anthropic(
 async function replanOnce(scenario) {
   const { validate, runTool, system } = makeWorld(scenario);
   const messages = [{ role: "user", content: scenario.message }];
-  const usage = { input: 0, output: 0, turns: 0, toolCalls: 0, proposals: 0 };
+  const usage = { input: 0, output: 0, turns: 0, toolCalls: 0, proposals: 0, nudges: 0 };
   const startedAt = Date.now();
   let accepted = null;
 
@@ -207,6 +209,12 @@ async function replanOnce(scenario) {
     usage.input += response.usage.input_tokens + (response.usage.cache_read_input_tokens ?? 0) + (response.usage.cache_creation_input_tokens ?? 0);
     usage.output += response.usage.output_tokens;
 
+    if (response.stop_reason === "end_turn" && usage.proposals > 0 && usage.proposals < MAX_PROPOSALS) {
+      usage.nudges++;
+      messages.push({ role: "assistant", content: response.content });
+      messages.push({ role: "user", content: "Your last plan was rejected. Fix the listed violations and submit a revised plan with propose_plan." });
+      continue;
+    }
     if (response.stop_reason !== "tool_use") {
       return { ...usage, seconds: (Date.now() - startedAt) / 1000, ok: false, reason: `stopped: ${response.stop_reason}` };
     }
@@ -243,7 +251,7 @@ for (const scenario of SCENARIOS) {
     const r = await replanOnce(scenario);
     runs.push(r);
     console.log(
-      `${scenario.id} run ${i + 1}: ok=${r.ok} turns=${r.turns} tool_calls=${r.toolCalls} proposals=${r.proposals} input=${r.input} output=${r.output} cost=$${cost(r).toFixed(4)} time=${r.seconds.toFixed(1)}s${r.reason ? " " + r.reason : ""}`,
+      `${scenario.id} run ${i + 1}: ok=${r.ok} turns=${r.turns} tool_calls=${r.toolCalls} proposals=${r.proposals} nudges=${r.nudges} input=${r.input} output=${r.output} cost=$${cost(r).toFixed(4)} time=${r.seconds.toFixed(1)}s${r.reason ? " " + r.reason : ""}`,
     );
     if (r.plan) console.log(`  plan: ${r.plan.activities.map((a) => `${a.start}-${a.end} ${a.place_id}`).join(", ")}\n  explanation: ${r.plan.explanation}`);
   }
